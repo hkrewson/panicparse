@@ -77,6 +77,9 @@ if [[ "${#panicList[@]}" > 1  ]]; then
 		printf '\n\n'
 		
 		# Print the macOS Panic String. 
+		# echo provides the formatting desired for readability. 
+		#	If you need or are happy with a single unformatted
+		#	string, printf could also work.
 		# IMPORTANT: Do NOT reformat the following!
 		echo $panicString | sed 's/\":\"/\
 	/g' | sed 's/\\//g' | sed 's/:\ \"/\
